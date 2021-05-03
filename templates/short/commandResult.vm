@@ -1,1 +1,1 @@
-$device.name command result received: $position.getString("result") at $dateTool.format("YYYY-MM-dd HH:mm:ss", $event.eventTime, $locale, $timezone)
+$device.name command result received: $position.getString("result") at $dateTool.format('dd-MM-yyyy HH:mm:ss', $event.eventTime, $locale, $timezone)

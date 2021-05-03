@@ -751,6 +751,20 @@ public final class Keys {
             "notificator.telegram.chatId",
             Collections.singletonList(KeyType.GLOBAL));
 
+    
+     /**
+     * WhatsApp API service full URL. Enables WhatsApp commands and notifications.
+     */
+    public static final ConfigKey<String> NOTIFICATOR_WHATSPP_URL = new ConfigKey<>(
+        "notificator.whatsapp.url",
+         Collections.singletonList(KeyType.GLOBAL));
+
+
+     public static final ConfigKey<String> NOTIFICATOR_WHATSPP_TEMPLATE = new ConfigKey<>(
+        "notificator.whatsapp.template",
+        Collections.singletonList(KeyType.GLOBAL));
+
+
     /**
      * Maximum time period for reports in seconds. Can be useful to prevent users to request unreasonably long reports.
      * By default there is no limit.

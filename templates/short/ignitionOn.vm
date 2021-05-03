@@ -1,1 +1,16 @@
-📢 *Aviso* 📢\r\n*Veículo:* $device.name\r\n*Alerta:* Ignição Ligada.\r\n*Data/Hora:* $dateTool.format("dd/MM/YYYY HH:mm:ss", $event.serverTime, $locale, $timezone)\r\n*Endereço Aproximado:*\r\n$position.address\r\n*Link da Localização (Google Maps):*\r\nhttps://www.google.com/maps/search/$position.latitude,$position.longitude\r\n#if($device.expired)\r\n*Aviso Automático*\r\nPrezado(a) Sr.(a) *$user.name*, consta em nosso sistema fatura(s) em aberto.\r\n\r\nCaso tenha dificuldade de efetuar o pagamento nos avise, para emitirmos o aviso para os técnicos, pois o *cancelamento do chip* é automático no sistema após *15 dias de atraso*.\r\n\r\n*Caso o pagamento tenha sido efetuado, por favor, desconsidere esta mensagem.*\r\n*Obrigado.*#end 
+📢 *Aviso* 📢
+*Veículo:* $device.name
+*Alerta:* Ignição Ligada.
+*Data/Hora:* $dateTool.format('dd-MM-yyyy HH:mm:ss', $event.eventTime, $locale, $timezone)
+*Endereço Aproximado:* $position.address
+*Link da Localização (Google Maps):* https://www.google.com/maps/search/$position.latitude,$position.longitude
+ 
+#if($device.expired)
+*Aviso Automático*
+Prezado(a) Sr.(a) *$user.name*, consta em nosso sistema fatura(s) em aberto.
+ 
+Caso tenha dificuldade de efetuar o pagamento nos avise, para emitirmos o aviso para os técnicos, pois o *cancelamento do chip* é automático no sistema após *15 dias de atraso*.
+ 
+*Caso o pagamento tenha sido efetuado, por favor, desconsidere esta mensagem.*
+*Obrigado.*
+#end
