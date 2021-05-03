@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd"
+  logicalFilePath="changelog-4.13a">
+
+  <changeSet author="Mateuus" id="changelog-4.13a">
+	<addColumn tableName="tc_users">
+       <column name="cpf" type="VARCHAR(128)" />
+	   <column name="telegram" type="VARCHAR(128)" />
+    </addColumn>
+  </changeSet>
+  
+   <changeSet author="Mateuus" id="changelog-4.13b">
+      <addColumn tableName="tc_devices">
+		<column name="placaId" type="VARCHAR(128)" />
+	  </addColumn>
+  </changeSet>
+  
+  <changeSet author="Mateuus" id="changelog-4.13c">
+      <addColumn tableName="tc_devices">
+		<column name="trackermodel" type="VARCHAR(128)" />
+		<column name="complement" type="VARCHAR(255)" />
+	  </addColumn>
+  </changeSet>
+  
+   <changeSet author="Mateuus" id="changelog-4.13d">
+      <addColumn tableName="tc_devices">
+		<column name="expired" type="BOOLEAN" defaultValueBoolean="false" />
+	  </addColumn>
+  </changeSet>
+  
+  <changeSet author="Mateuus" id="changelog-4.13e">
+      <addColumn tableName="tc_devices">
+	  <column name="photo" type="LONGTEXT" />
+	  </addColumn>
+  </changeSet>
+  
+   <changeSet author="Mateuus" id="changelog-4.13f">
+      <addColumn tableName="tc_users">
+	  <column name="photo" type="LONGTEXT" />
+	  </addColumn>
+  </changeSet>
+  
+   <changeSet author="Mateuus" id="changelog-4.13g">
+      <addColumn tableName="tc_statistics">
+		 <column name="whatsappsent" type="INT" defaultValueNumeric="0">
+			<constraints nullable="false" />
+		 </column>
+	  </addColumn>
+  </changeSet>
+
+</databaseChangeLog>

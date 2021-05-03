@@ -33,6 +33,16 @@ public class Device extends GroupedModel {
         this.name = name;
     }
 
+    private String placaId;
+
+    public String getPlacaId() {
+        return placaId;
+    }
+
+    public void setPlacaId(String placaId) {
+        this.placaId = placaId;
+    }
+
     private String uniqueId;
 
     public String getUniqueId() {
@@ -109,6 +119,26 @@ public class Device extends GroupedModel {
         this.phone = phone;
     }
 
+    private String trackermodel;
+
+    public String getTrackermodel() {
+        return trackermodel;
+    }
+
+    public void setTrackermodel(String trackermodel) {
+        this.trackermodel = trackermodel;
+    }
+
+    private String complement;
+
+    public String getComplement() {
+        return complement;
+    }
+
+    public void setComplement(String complement) {
+        this.complement = complement;
+    }
+
     private String model;
 
     public String getModel() {
@@ -139,6 +169,16 @@ public class Device extends GroupedModel {
         this.category = category;
     }
 
+    private String photo;
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
     private boolean disabled;
 
     public boolean getDisabled() {
@@ -149,4 +189,13 @@ public class Device extends GroupedModel {
         this.disabled = disabled;
     }
 
+    private boolean expired;
+
+    public boolean getExpired() {
+        return expired;
+    }
+
+    public void setExpired(boolean expired) {
+        this.expired = expired;
+    }
 }

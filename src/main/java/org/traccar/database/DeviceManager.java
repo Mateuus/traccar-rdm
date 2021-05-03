@@ -276,11 +276,16 @@ public class DeviceManager extends BaseObjectManager<Device> implements Identity
     protected void updateCachedItem(Device device) {
         Device cachedDevice = getById(device.getId());
         cachedDevice.setName(device.getName());
+		cachedDevice.setPlacaId(device.getPlacaId());
         cachedDevice.setGroupId(device.getGroupId());
         cachedDevice.setCategory(device.getCategory());
         cachedDevice.setContact(device.getContact());
+		cachedDevice.setTrackermodel(device.getTrackermodel());
+		cachedDevice.setComplement(device.getComplement());
         cachedDevice.setModel(device.getModel());
+		cachedDevice.setPhoto(device.getPhoto());
         cachedDevice.setDisabled(device.getDisabled());
+		cachedDevice.setExpired(device.getExpired());
         cachedDevice.setAttributes(device.getAttributes());
         if (!device.getUniqueId().equals(cachedDevice.getUniqueId())) {
             removeByUniqueId(cachedDevice.getUniqueId());
