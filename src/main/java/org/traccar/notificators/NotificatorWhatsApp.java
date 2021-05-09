@@ -56,8 +56,8 @@ public class NotificatorWhatsApp extends Notificator {
         byte[] out = Message.class.toString().getBytes(StandardCharsets.UTF_8);
 
         Context.getClient().target(url).request()
-                //.async().post(Entity.json(message), new InvocationCallback<Object>() {
-                    .async().post(Entity.entity(out,MediaType.APPLICATION_JSON_TYPE), new InvocationCallback<Object>() {
+                 .async().post(Entity.json(message), new InvocationCallback<Object>() {
+                    //.async().post(Entity.entity(out,MediaType.APPLICATION_JSON_TYPE), new InvocationCallback<Object>() {
             @Override
             public void completed(Object o) {
             }
