@@ -1,1 +1,13 @@
-$device.name has exited geofence $geofence.name at $dateTool.format("YYYY-MM-dd HH:mm:ss", $event.eventTime, $locale, $timezone)
+#if($geofence.description == "AntiFurto")
+📢 *Anti Furto Ativado* 📢
+*Alerta:* $device.name saiu da geocerca de Anti Furto.
+*Data/Hora:* $dateTool.format('dd-MM-yyyy HH:mm:ss', $event.eventTime, $locale, $timezone)
+*Endereço Aproximado:* $position.address
+*Link da Localização (Google Maps):* https://www.google.com/maps/search/$position.latitude,$position.longitude
+#else
+📢 *Aviso* 📢
+*Alerta:* $device.name saiu da geocerca $geofence.name
+*Data/Hora:* $dateTool.format('dd-MM-yyyy HH:mm:ss', $event.eventTime, $locale, $timezone)
+*Endereço Aproximado:* $position.address
+*Link da Localização (Google Maps):* https://www.google.com/maps/search/$position.latitude,$position.longitude
+#end
